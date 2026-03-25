@@ -1,7 +1,7 @@
 CMakeFiles/search_engine.dir/src/search_server.cpp.obj: \
  C:\projectClion\search_engine\src\search_server.cpp \
  C:/projectClion/search_engine/include/SearchServer.h \
- C:/projectClion/search_engine/include/InverterIndex.h \
+ C:/projectClion/search_engine/include/InvertedIndex.h \
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/iostream \
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/requires_hosted.h \
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \

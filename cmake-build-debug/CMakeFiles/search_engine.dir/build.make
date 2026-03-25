@@ -113,20 +113,20 @@ CMakeFiles/search_engine.dir/src/entry.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/search_engine.dir/src/entry.cpp.s"
 	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\projectClion\search_engine\src\entry.cpp -o CMakeFiles\search_engine.dir\src\entry.cpp.s
 
-CMakeFiles/search_engine.dir/src/inverter_index.cpp.obj: CMakeFiles/search_engine.dir/flags.make
-CMakeFiles/search_engine.dir/src/inverter_index.cpp.obj: CMakeFiles/search_engine.dir/includes_CXX.rsp
-CMakeFiles/search_engine.dir/src/inverter_index.cpp.obj: C:/projectClion/search_engine/src/inverter_index.cpp
-CMakeFiles/search_engine.dir/src/inverter_index.cpp.obj: CMakeFiles/search_engine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\projectClion\search_engine\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/search_engine.dir/src/inverter_index.cpp.obj"
-	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/search_engine.dir/src/inverter_index.cpp.obj -MF CMakeFiles\search_engine.dir\src\inverter_index.cpp.obj.d -o CMakeFiles\search_engine.dir\src\inverter_index.cpp.obj -c C:\projectClion\search_engine\src\inverter_index.cpp
+CMakeFiles/search_engine.dir/src/inverted_index.cpp.obj: CMakeFiles/search_engine.dir/flags.make
+CMakeFiles/search_engine.dir/src/inverted_index.cpp.obj: CMakeFiles/search_engine.dir/includes_CXX.rsp
+CMakeFiles/search_engine.dir/src/inverted_index.cpp.obj: C:/projectClion/search_engine/src/inverted_index.cpp
+CMakeFiles/search_engine.dir/src/inverted_index.cpp.obj: CMakeFiles/search_engine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\projectClion\search_engine\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/search_engine.dir/src/inverted_index.cpp.obj"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/search_engine.dir/src/inverted_index.cpp.obj -MF CMakeFiles\search_engine.dir\src\inverted_index.cpp.obj.d -o CMakeFiles\search_engine.dir\src\inverted_index.cpp.obj -c C:\projectClion\search_engine\src\inverted_index.cpp
 
-CMakeFiles/search_engine.dir/src/inverter_index.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/search_engine.dir/src/inverter_index.cpp.i"
-	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\projectClion\search_engine\src\inverter_index.cpp > CMakeFiles\search_engine.dir\src\inverter_index.cpp.i
+CMakeFiles/search_engine.dir/src/inverted_index.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/search_engine.dir/src/inverted_index.cpp.i"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\projectClion\search_engine\src\inverted_index.cpp > CMakeFiles\search_engine.dir\src\inverted_index.cpp.i
 
-CMakeFiles/search_engine.dir/src/inverter_index.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/search_engine.dir/src/inverter_index.cpp.s"
-	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\projectClion\search_engine\src\inverter_index.cpp -o CMakeFiles\search_engine.dir\src\inverter_index.cpp.s
+CMakeFiles/search_engine.dir/src/inverted_index.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/search_engine.dir/src/inverted_index.cpp.s"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\projectClion\search_engine\src\inverted_index.cpp -o CMakeFiles\search_engine.dir\src\inverted_index.cpp.s
 
 CMakeFiles/search_engine.dir/src/relative_index.cpp.obj: CMakeFiles/search_engine.dir/flags.make
 CMakeFiles/search_engine.dir/src/relative_index.cpp.obj: CMakeFiles/search_engine.dir/includes_CXX.rsp
@@ -163,7 +163,7 @@ search_engine_OBJECTS = \
 "CMakeFiles/search_engine.dir/src/engine.cpp.obj" \
 "CMakeFiles/search_engine.dir/src/converter_json.cpp.obj" \
 "CMakeFiles/search_engine.dir/src/entry.cpp.obj" \
-"CMakeFiles/search_engine.dir/src/inverter_index.cpp.obj" \
+"CMakeFiles/search_engine.dir/src/inverted_index.cpp.obj" \
 "CMakeFiles/search_engine.dir/src/relative_index.cpp.obj" \
 "CMakeFiles/search_engine.dir/src/search_server.cpp.obj"
 
@@ -173,18 +173,15 @@ search_engine_EXTERNAL_OBJECTS =
 search_engine.exe: CMakeFiles/search_engine.dir/src/engine.cpp.obj
 search_engine.exe: CMakeFiles/search_engine.dir/src/converter_json.cpp.obj
 search_engine.exe: CMakeFiles/search_engine.dir/src/entry.cpp.obj
-search_engine.exe: CMakeFiles/search_engine.dir/src/inverter_index.cpp.obj
+search_engine.exe: CMakeFiles/search_engine.dir/src/inverted_index.cpp.obj
 search_engine.exe: CMakeFiles/search_engine.dir/src/relative_index.cpp.obj
 search_engine.exe: CMakeFiles/search_engine.dir/src/search_server.cpp.obj
 search_engine.exe: CMakeFiles/search_engine.dir/build.make
-search_engine.exe: lib/libgtest_main.a
-search_engine.exe: lib/libgtest.a
 search_engine.exe: CMakeFiles/search_engine.dir/linkLibs.rsp
 search_engine.exe: CMakeFiles/search_engine.dir/objects1
 search_engine.exe: CMakeFiles/search_engine.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\projectClion\search_engine\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable search_engine.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\search_engine.dir\link.txt --verbose=$(VERBOSE)
-	"C:\Program Files\JetBrains\CLion 2023.1.4\bin\cmake\win\x64\bin\cmake.exe" -D TEST_TARGET=search_engine -D TEST_EXECUTABLE=C:/projectClion/search_engine/cmake-build-debug/search_engine.exe -D TEST_EXECUTOR= -D TEST_WORKING_DIR=C:/projectClion/search_engine/cmake-build-debug -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_FILTER= -D NO_PRETTY_TYPES=FALSE -D NO_PRETTY_VALUES=FALSE -D TEST_LIST=search_engine_TESTS -D CTEST_FILE=C:/projectClion/search_engine/cmake-build-debug/search_engine[1]_tests.cmake -D TEST_DISCOVERY_TIMEOUT=5 -D TEST_XML_OUTPUT_DIR= -P "C:/Program Files/JetBrains/CLion 2023.1.4/bin/cmake/win/x64/share/cmake-3.25/Modules/GoogleTestAddTests.cmake"
 
 # Rule to build all files generated by this target.
 CMakeFiles/search_engine.dir/build: search_engine.exe

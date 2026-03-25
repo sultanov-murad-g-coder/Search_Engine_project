@@ -1,5 +1,5 @@
 #pragma once
-#include "..\include\InverterIndex.h"
+#include "..\include\InvertedIndex.h"
 #include "..\include\RelativeIndex.h"
 #include "..\include\ConverterJSON.h"
 

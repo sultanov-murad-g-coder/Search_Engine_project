@@ -647,7 +647,7 @@ CMakeFiles/search_engine.dir/src/engine.cpp.obj: C:/projectClion/search_engine/s
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/x86_64-w64-mingw32/bits/basic_file.h \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/x86_64-w64-mingw32/bits/c++io.h \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/fstream.tcc \
-  C:/projectClion/search_engine/include/InverterIndex.h \
+  C:/projectClion/search_engine/include/InvertedIndex.h \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/thread \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/std_thread.h \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/this_thread_sleep.h \
@@ -800,8 +800,8 @@ CMakeFiles/search_engine.dir/src/entry.cpp.obj: C:/projectClion/search_engine/sr
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/istream \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/istream.tcc
 
-CMakeFiles/search_engine.dir/src/inverter_index.cpp.obj: C:/projectClion/search_engine/src/inverter_index.cpp \
-  C:/projectClion/search_engine/include/InverterIndex.h \
+CMakeFiles/search_engine.dir/src/inverted_index.cpp.obj: C:/projectClion/search_engine/src/inverted_index.cpp \
+  C:/projectClion/search_engine/include/InvertedIndex.h \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/iostream \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/requires_hosted.h \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
@@ -1125,7 +1125,7 @@ CMakeFiles/search_engine.dir/src/relative_index.cpp.obj: C:/projectClion/search_
 
 CMakeFiles/search_engine.dir/src/search_server.cpp.obj: C:/projectClion/search_engine/src/search_server.cpp \
   C:/projectClion/search_engine/include/SearchServer.h \
-  C:/projectClion/search_engine/include/InverterIndex.h \
+  C:/projectClion/search_engine/include/InvertedIndex.h \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/iostream \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/requires_hosted.h \
   C:/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
@@ -2004,8 +2004,6 @@ C:/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/ctime:
 
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/parse_numbers.h:
 
-C:/projectClion/search_engine/src/inverter_index.cpp:
-
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/bits/fs_path.h:
 
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/locale:
@@ -2090,6 +2088,8 @@ _deps/googletest-src/googletest/include/gtest/gtest-assertion-result.h:
 
 _deps/googletest-src/googletest/include/gtest/gtest-message.h:
 
+C:/projectClion/search_engine/src/inverted_index.cpp:
+
 _deps/googletest-src/googletest/include/gtest/internal/gtest-port.h:
 
 C:/mingw64/x86_64-w64-mingw32/include/direct.h:
@@ -2128,7 +2128,7 @@ _deps/googletest-src/googletest/include/gtest/gtest-test-part.h:
 
 _deps/googletest-src/googletest/include/gtest/gtest-typed-test.h:
 
-C:/projectClion/search_engine/include/InverterIndex.h:
+C:/projectClion/search_engine/include/InvertedIndex.h:
 
 C:/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/thread:
 
