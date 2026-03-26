@@ -22,7 +22,4 @@ class SearchServer
 
     static vector<vector<pair<int,float>>> MakeVecForAnswer(const vector<vector<RelativeIndex>> &res_search);
 };
-#ifndef REQUEST_JSON_SEARCHSERVER_H
-#define REQUEST_JSON_SEARCHSERVER_H
 
-#endif //REQUEST_JSON_SEARCHSERVER_H

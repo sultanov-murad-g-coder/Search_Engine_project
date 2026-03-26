@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
 #include "../include/InvertedIndex.h"
 #include "../include/SearchServer.h"
-#include "../include/RelativeIndex.h"
+
 
 using namespace std;
 

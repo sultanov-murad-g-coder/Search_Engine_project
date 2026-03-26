@@ -28,6 +28,7 @@
 
     auto count_size = vec_final.size();
     auto max_responses  = ConverterJSON::GetResponsesLimit();
+   // auto max_responses = 5;
     if (count_size>max_responses) {count_size=max_responses;}
 
     for(auto j=0; j<count_size; j++)
@@ -40,7 +41,7 @@
 
  vector<vector<RelativeIndex>> SearchServer::Search (const vector<string> &queries_input)
  {
-    vector<vector<RelativeIndex>> res_search; // вектор возвращаемый функцией
+    vector<vector<RelativeIndex>> res_search; // вектор возвращаемый методом search
 
     vector<Entry> vec_entry; // вектор частот
 
@@ -108,29 +109,29 @@
 
             sum_vec.erase(remove(sum_vec.begin(), sum_vec.end(), 0),sum_vec.end());
 
-            vector<RelativeIndex> prom_vec_relative;
+            vector<RelativeIndex> temporary_vec_relative;
 
             for(size_t pos=0; pos<vec_until_sort.size(); pos++)
              {
                if (vec_until_sort[pos]==0) { continue;}
                else
                 {
-                 prom_vec_relative.emplace_back(pos,(float)vec_until_sort[pos]/(float)max_in_sum_vec);
+                    temporary_vec_relative.emplace_back(pos,(float)vec_until_sort[pos]/(float)max_in_sum_vec);
                 }
              }
 
-            sort(prom_vec_relative.begin(),prom_vec_relative.end(),[](const RelativeIndex &a,const RelativeIndex &b)->bool{
+            sort(temporary_vec_relative.begin(),temporary_vec_relative.end(),[](const RelativeIndex &a,const RelativeIndex &b)->bool{
                 return a.rank>b.rank;
             });
 
-            res_search.emplace_back(SortFunc(prom_vec_relative));// добавляем результат по запросу
+            res_search.emplace_back(SortFunc(temporary_vec_relative));// добавляем результат по запросу
 
             vec_for_map.clear();
         }
         else
         {
-            vector<RelativeIndex> prom_vec_relative;
-            res_search.emplace_back(prom_vec_relative);
+            vector<RelativeIndex> temporary_vec_relative;
+            res_search.emplace_back(temporary_vec_relative);
         }
      }
 

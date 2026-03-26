@@ -3,6 +3,7 @@
 #include "..\include\InvertedIndex.h"
 #include "..\include\SearchServer.h"
 
+
 int main() {
 
    InvertedIndex inverter;
@@ -11,7 +12,7 @@ int main() {
 
    SearchServer srv(inverter);
 
-   vector<vector<RelativeIndex>> res=srv.Search(ConverterJSON::GetRequest());
+   vector<vector<RelativeIndex>> res = srv.Search(ConverterJSON::GetRequest());
 
    vector<vector<pair<int,float>>> vec_for_print;
 

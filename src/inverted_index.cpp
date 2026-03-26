@@ -1,5 +1,6 @@
 #include "..\include\InvertedIndex.h"
 
+
  vector<string>InvertedIndex::MakeVector(const string &in_str)
   {
     string word_str;
@@ -51,14 +52,14 @@
     vector<thread> t_threads;
     vector<map<string,Entry>> freq_dictionary_all_map(input_docs.size());
 
-    docs=input_docs;
+    docs = input_docs;
 
     for(size_t f=0; f<input_docs.size(); f++)
     {
         this_thread::sleep_for(chrono::milliseconds (15));
         t_threads.emplace_back([f,&input_docs,&freq_dictionary_all_map]()
                                {
-                                   freq_dictionary_all_map[f]=MakeMap(input_docs,f);
+                                   freq_dictionary_all_map[f] = MakeMap(input_docs,f);
                                });
     }
 

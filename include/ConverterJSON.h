@@ -24,7 +24,4 @@ class ConverterJSON
     static void PutAnswers(vector<vector<pair<int,float>>> &answers);
  };
 
-#ifndef REQUEST_JSON_CONVERTERJSON_H
-#define REQUEST_JSON_CONVERTERJSON_H
 
-#endif //REQUEST_JSON_CONVERTERJSON_H

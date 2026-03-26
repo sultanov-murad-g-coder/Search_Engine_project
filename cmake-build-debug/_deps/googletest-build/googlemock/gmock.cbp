@@ -5,7 +5,7 @@
 		<Option title="gmock"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\cmake-build-debug\;CMake Files\cmake-build-debug\_deps\;CMake Files\cmake-build-debug\_deps\googletest-src\;CMake Files\cmake-build-debug\_deps\googletest-src\googlemock\;CMake Files\cmake-build-debug\_deps\googletest-src\googlemock\cmake\;CMake Files\cmake-build-debug\_deps\googletest-src\googletest\;CMake Files\cmake-build-debug\_deps\googletest-src\googletest\cmake\;CMake Files\nlohmann_json\;CMake Files\nlohmann_json\cmake\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\cmake-build-debug\;CMake Files\cmake-build-debug\_deps\;CMake Files\cmake-build-debug\_deps\googletest-src\;CMake Files\cmake-build-debug\_deps\googletest-src\googlemock\;CMake Files\cmake-build-debug\_deps\googletest-src\googlemock\cmake\;CMake Files\cmake-build-debug\_deps\googletest-src\googletest\;CMake Files\cmake-build-debug\_deps\googletest-src\googletest\cmake\;CMake Files\nlohmann_json\;CMake Files\nlohmann_json\cmake\;CMake Files\tests\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="C:/projectClion/search_engine/cmake-build-debug/_deps/googletest-build/googlemock"/>
@@ -74,10 +74,10 @@
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/projectClion/search_engine/cmake-build-debug/_deps/googletest-src/googletest/include"/>
-					<Add directory="C:/projectClion/search_engine/cmake-build-debug/_deps/googletest-src/googletest"/>
 					<Add directory="C:/projectClion/search_engine/cmake-build-debug/_deps/googletest-src/googlemock/include"/>
 					<Add directory="C:/projectClion/search_engine/cmake-build-debug/_deps/googletest-src/googlemock"/>
+					<Add directory="C:/projectClion/search_engine/cmake-build-debug/_deps/googletest-src/googletest/include"/>
+					<Add directory="C:/projectClion/search_engine/cmake-build-debug/_deps/googletest-src/googletest"/>
 					<Add directory="C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++"/>
 					<Add directory="C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/backward"/>
@@ -99,10 +99,10 @@
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/projectClion/search_engine/cmake-build-debug/_deps/googletest-src/googletest/include"/>
-					<Add directory="C:/projectClion/search_engine/cmake-build-debug/_deps/googletest-src/googletest"/>
 					<Add directory="C:/projectClion/search_engine/cmake-build-debug/_deps/googletest-src/googlemock/include"/>
 					<Add directory="C:/projectClion/search_engine/cmake-build-debug/_deps/googletest-src/googlemock"/>
+					<Add directory="C:/projectClion/search_engine/cmake-build-debug/_deps/googletest-src/googletest/include"/>
+					<Add directory="C:/projectClion/search_engine/cmake-build-debug/_deps/googletest-src/googletest"/>
 					<Add directory="C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++"/>
 					<Add directory="C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/backward"/>
@@ -263,6 +263,9 @@
 		</Unit>
 		<Unit filename="C:/projectClion/search_engine/nlohmann_json/cmake/pkg-config.pc.in">
 			<Option virtualFolder="CMake Files\nlohmann_json\cmake\"/>
+		</Unit>
+		<Unit filename="C:/projectClion/search_engine/tests/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tests\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

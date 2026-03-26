@@ -5,7 +5,6 @@ project(search_engine)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-
 option(BUILD_TESTS "Build unit tests" OFF)
 
 set(JSON_BuildTests OFF CACHE INTERNAL "")
@@ -26,6 +25,12 @@ add_executable(search_engine
         )
 target_link_libraries(search_engine  PRIVATE nlohmann_json::nlohmann_json)
 
+#[[set(BUILD_TESTS ON)]]
+
 if(BUILD_TESTS)
     add_subdirectory(tests)
 endif()
+
+
+
+

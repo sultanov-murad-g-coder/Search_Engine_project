@@ -99,7 +99,8 @@
 
     try
      {
-       ifstream file_config("..//config.json");
+       ifstream file_config;
+       file_config.open("..//config.json");
 
        if (file_config.is_open())
         {

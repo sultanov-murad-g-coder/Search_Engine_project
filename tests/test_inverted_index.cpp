@@ -1,6 +1,5 @@
 #include <gtest/gtest.h>
 #include "../include/InvertedIndex.h"
-#include "../include/Entry.h"
 
 using namespace std;
 
