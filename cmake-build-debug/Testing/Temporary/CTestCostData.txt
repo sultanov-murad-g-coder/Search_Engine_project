@@ -1,3 +1,0 @@
-TestCaseSearchServer.TestSimple 1 0.259297
-TestCaseSearchServer.TestTop5 1 0.0902438
----
