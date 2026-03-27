@@ -25,11 +25,10 @@ add_executable(search_engine
         )
 target_link_libraries(search_engine  PRIVATE nlohmann_json::nlohmann_json)
 
-#[[set(BUILD_TESTS ON)]]
-
 if(BUILD_TESTS)
     add_subdirectory(tests)
 endif()
+
 
 
 

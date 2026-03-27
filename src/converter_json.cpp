@@ -217,3 +217,32 @@
         file_for_write <<"}";
         file_for_write.close();
     }
+
+ string ConverterJSON::GetNameProject()
+  {
+    json dict;
+    ifstream file_config;
+
+    try
+     {
+       file_config.open("..//config.json");
+        if(file_config.is_open())
+        {
+            file_config >> dict;
+            return dict["config"]["name"];
+        }
+        else {throw runtime_error("config file is missing or error opening");}
+     }
+
+    catch (const runtime_error &ex)
+    {
+       cout << ex.what() << "\n";
+    }
+
+    catch (...)
+    {
+       cout<<"unknown error in method GetName";
+    }
+
+   return {};
+  }

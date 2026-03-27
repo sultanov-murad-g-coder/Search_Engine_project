@@ -21,6 +21,8 @@ class ConverterJSON
 
     static vector<string> GetRequest();
 
+    static string GetNameProject();
+
     static void PutAnswers(vector<vector<pair<int,float>>> &answers);
  };
 

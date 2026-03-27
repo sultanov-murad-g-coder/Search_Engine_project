@@ -20,6 +20,12 @@ int main() {
 
    ConverterJSON::PutAnswers(vec_for_print);
 
+   string str = ConverterJSON::GetNameProject();
+
+   cout << "-----------------------------" << "\n";
+   cout << "Start\t" << "< " <<str<<" >" << "\t" << "\n";
+   cout << "-----------------------------" << "\n";
+
    return 0;
 }
 

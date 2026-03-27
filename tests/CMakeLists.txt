@@ -3,14 +3,16 @@ include(FetchContent)
 FetchContent_Declare(googletest
         URL https://github.com/google/googletest/archive/5376968f6948923e2411081fd9372e71a59d8e77.zip)
 
-
 set(gtest_disable_pthreads ON)
-#[[set(gtest_disable_pthreads OFF CACHE BOOL "" FORCE)]]
+
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 
 FetchContent_MakeAvailable(googletest)
 
 include_directories(${googletest_SOURCE_DIR}/googletest/include)
+
+file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/../config.json
+        DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/..)
 
 add_executable(run_tests
         test_inverted_index.cpp
@@ -21,7 +23,6 @@ add_executable(run_tests
         ../src/relative_index.cpp
         ../src/search_server.cpp
         )
-
 
 target_include_directories(run_tests PRIVATE
         ${CMAKE_CURRENT_SOURCE_DIR}/../include

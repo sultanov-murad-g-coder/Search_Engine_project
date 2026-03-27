@@ -2,7 +2,6 @@
 #include "../include/InvertedIndex.h"
 #include "../include/SearchServer.h"
 
-
 using namespace std;
 
 TEST(TestCaseSearchServer,TestSimple)
