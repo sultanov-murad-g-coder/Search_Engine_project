@@ -14,9 +14,7 @@ int main() {
 
    vector<vector<RelativeIndex>> res = srv.Search(ConverterJSON::GetRequest());
 
-   vector<vector<pair<int,float>>> vec_for_print;
-
-   vec_for_print=SearchServer::MakeVecForAnswer(res);
+   vector<vector<pair<int,float>>> vec_for_print = SearchServer::MakeVecForAnswer(res);
 
    ConverterJSON::PutAnswers(vec_for_print);
 
