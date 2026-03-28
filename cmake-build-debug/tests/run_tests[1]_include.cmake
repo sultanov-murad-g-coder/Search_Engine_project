@@ -1,5 +1,0 @@
-if(EXISTS "C:/projectClion/search_engine/cmake-build-debug/tests/run_tests[1]_tests.cmake")
-  include("C:/projectClion/search_engine/cmake-build-debug/tests/run_tests[1]_tests.cmake")
-else()
-  add_test(run_tests_NOT_BUILT run_tests_NOT_BUILT)
-endif()
