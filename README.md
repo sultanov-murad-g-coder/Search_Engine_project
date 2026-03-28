@@ -93,7 +93,7 @@ json
 "../path/to/document.txt"
 ]
 }
-## Run Commands
+### Run Commands
 
 bash
 
@@ -101,7 +101,7 @@ cd build
 ./search_engine          # Linux / macOS
 .\search_engine.exe      # Windows
 
-## Run Tests
+### Run Tests
 
 bash
 
@@ -136,6 +136,7 @@ search_engine/
 ├── requests.json
 ├── CMakeLists.txt
 └── README.md
+
 ## Author
   Sultanov Murad
   Email: S.Murad.G@mail.ru
