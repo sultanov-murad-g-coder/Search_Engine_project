@@ -1,8 +1,4 @@
-# Search Engine / Поисковый движок
-
----
-
-## English
+# Search Engine
 
 ### Project Description
 
