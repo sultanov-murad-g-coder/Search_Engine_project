@@ -14,17 +14,17 @@ The search is performed in a list of text documents located in the project's res
 5. Google Test
 6. MinGW compiler
 
-### Requirements
+#### Requirements
 
 1. CMake 3.25+
 2. Compiler with C++14 / C++17 support
 3. Git
 
-### How to Build and Run
+#### How to Build and Run
 
 Download the project source files.
 
-#### Build without unit tests (MSVC compiler)
+##### Build without unit tests (MSVC compiler)
 
 bash
 
@@ -34,7 +34,7 @@ cd build
 cmake -DBUILD_TESTS=OFF ..
 cmake --build .
 
-#### Build with unit tests (MSVC compiler)
+##### Build with unit tests (MSVC compiler)
 
 bash
 
@@ -44,7 +44,7 @@ cd build
 cmake -DBUILD_TESTS=ON ..
 cmake --build .
 
-### Build without unit tests (MinGW compiler)
+##### Build without unit tests (MinGW compiler)
 
 bash
 
@@ -54,7 +54,7 @@ cd build
 cmake -G "MinGW Makefiles" -DBUILD_TESTS=OFF ..
 mingw32-make
 
-#### Build with unit tests (MinGW compiler)
+###### Build with unit tests (MinGW compiler)
 
 bash
 
@@ -64,7 +64,7 @@ cd build
 cmake -G "MinGW Makefiles" -DBUILD_TESTS=ON ..
 mingw32-make
 
-### Configuration Files
+###### Configuration Files
 Before running the executable, configure the following files:
 
 requests.json — contains an array of search queries
