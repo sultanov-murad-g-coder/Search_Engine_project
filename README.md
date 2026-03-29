@@ -56,7 +56,6 @@ Download the project source files.
  cmake -G "MinGW Makefiles" -DBUILD_TESTS=ON ..
  mingw32-make
 
-text
 
 ## Configuration Files
 
