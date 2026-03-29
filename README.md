@@ -1,11 +1,12 @@
 # Search Engine
 
-### Project Description
+## Project Description
 
-This project is a prototype of a search engine. It implements search for relevant responses to user queries. 
+This project is a prototype of a search engine.
+It implements search for relevant responses to user queries. 
 The search is performed in a list of text documents located in the project's resources folder.
 
-### Technology Stack
+## Technology Stack
 
 1. C++17 standard
 2. IDE: CLion 2023
@@ -14,106 +15,104 @@ The search is performed in a list of text documents located in the project's res
 5. Google Test
 6. MinGW compiler
 
-#### Requirements
+## Requirements
 
 1. CMake 3.25+
 2. Compiler with C++14 / C++17 support
 3. Git
 
-#### How to Build and Run
+## How to Build and Run
 
 Download the project source files.
 
-##### Build without unit tests (MSVC compiler)
+### Build without unit tests (MSVC compiler)
 
-bash
+ cd search_engine
+ mkdir build
+ cd build
+ cmake -DBUILD_TESTS=OFF ..
+ cmake --build .
 
-cd search_engine
-mkdir build
-cd build
-cmake -DBUILD_TESTS=OFF ..
-cmake --build .
+### Build with unit tests (MSVC compiler)
 
-##### Build with unit tests (MSVC compiler)
+ cd search_engine
+ mkdir build
+ cd build
+ cmake -DBUILD_TESTS=ON ..
+ cmake --build .
 
-bash
+### Build without unit tests (MinGW compiler)
 
-cd search_engine
-mkdir build
-cd build
-cmake -DBUILD_TESTS=ON ..
-cmake --build .
+ cd search_engine
+ mkdir build
+ cd build
+ cmake -G "MinGW Makefiles" -DBUILD_TESTS=OFF ..
+ mingw32-make
 
-##### Build without unit tests (MinGW compiler)
+### Build with unit tests (MinGW compiler)
+ cd search_engine
+ mkdir build
+ cd build
+ cmake -G "MinGW Makefiles" -DBUILD_TESTS=ON ..
+ mingw32-make
 
-bash
+text
 
-cd search_engine
-mkdir build
-cd build
-cmake -G "MinGW Makefiles" -DBUILD_TESTS=OFF ..
-mingw32-make
+## Configuration Files
 
-###### Build with unit tests (MinGW compiler)
+ Before running the executable, configure the following files:
 
-bash
+### requests.json - contains an array of search queries
 
-cd search_engine
-mkdir build
-cd build
-cmake -G "MinGW Makefiles" -DBUILD_TESTS=ON ..
-mingw32-make
+ Example:
 
-###### Configuration Files
-Before running the executable, configure the following files:
+ {
+   "requests": [
+   "first query",
+   "second query"
+   ]
+ }
 
-requests.json — contains an array of search queries
-## Example:
+### config.json - contains paths to documents and search settings
 
-json
-{
-"requests": [
-"first query",
-"second query"
-]
+ By default, it is correctly filled; changes are optional.
+
+ Example:
+
+ {
+   "config": {
+   "name": "project name",
+   "version": "0.1",
+   "max_responses": 5
+ },
+   "files": [
+   "../path/to/document.txt"
+  ]
 }
-config.json — contains paths to documents and search settings
-By default, it is correctly filled; changes are optional.
 
-## Example:
+## Run Commands
+ cd build
+ ./search_engine
 
-json
-{
-"config": {
-"name": "project name",
-"version": "0.1",
-"max_responses": "number of responses"
-},
-"files": [
-"../path/to/document.txt"
-]
-}
-### Run Commands
+ For Windows:
+ cd build
+ search_engine.exe
 
-bash
+## Run Tests
 
-cd build
-./search_engine          # Linux / macOS
-.\search_engine.exe      # Windows
+ cd build
+ ./tests/run_tests
 
-### Run Tests
+ For Windows:
+ cd build
+ tests\run_tests.exe
 
-bash
-
-cd build
-./tests/run_tests        # Linux / macOS
-.\tests\run_tests.exe    # Windows
 
 ## Output
-The search result is saved to answers.json in the project root directory.
+
+ The search result is saved to answers.json in the project root directory.
 
 ## Project Structure
- text
 
 search_engine/
 ├── include/
@@ -138,6 +137,6 @@ search_engine/
 └── README.md
 
 ## Author
-  Sultanov Murad
-  Email: S.Murad.G@mail.ru
 
+Sultanov Murad
+Email: S.Murad.G@mail.ru
