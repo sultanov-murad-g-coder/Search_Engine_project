@@ -3,50 +3,43 @@
  SearchServer::SearchServer(InvertedIndex &idx) : _index(idx){};
 
  vector<RelativeIndex> SearchServer::SortFunc(const vector<RelativeIndex> &vector_in)
-{
-    vector<RelativeIndex> vec_final,vec_manip,vec_final_cut;
+ {
+     vector<RelativeIndex> vec_final,vec_manip,vec_final_cut;
 
-    for(size_t i=0; i<vector_in.size(); i++)
-    {
-        if ( i+1<vector_in.size() && vector_in[i].rank==vector_in[i+1].rank)
-        {
-            vec_manip.emplace_back(vector_in[i]);
-        }
+     for(size_t i=0; i<vector_in.size(); i++)
+     {
+        if ( i+1<vector_in.size() && vector_in[i].rank==vector_in[i+1].rank) { vec_manip.emplace_back(vector_in[i]); }
+
         else
         {
             vec_manip.emplace_back(vector_in[i]);
-            sort(vec_manip.begin(),vec_manip.end(),[](const RelativeIndex &a, const RelativeIndex &b)->bool{
+            sort(vec_manip.begin(),vec_manip.end(),[](const RelativeIndex &a, const RelativeIndex &b)->bool
+            {
                 return a.doc_id<b.doc_id;
             });
-            for(auto & t : vec_manip)
-            {
-                vec_final.emplace_back(t);
-            }
+
+            for(auto & t : vec_manip) { vec_final.emplace_back(t); }
+
             vec_manip.clear();
         }
-    }
+     }
 
-    auto count_size = vec_final.size();
-    auto max_responses  = ConverterJSON::GetResponsesLimit();
-   // auto max_responses = 5;
-    if (count_size>max_responses) {count_size=max_responses;}
+     auto count_size=vec_final.size();
 
-    for(auto j=0; j<count_size; j++)
-    {
-        vec_final_cut.emplace_back(vec_final[j]);
-    }
+     auto max_responses=ConverterJSON::GetResponsesLimit();
 
-    return vec_final_cut;
-}
+     if (count_size>max_responses) { count_size=max_responses; }
+
+     for(auto j=0; j<count_size; j++) { vec_final_cut.emplace_back(vec_final[j]); }
+
+     return vec_final_cut;
+ }
 
  vector<vector<RelativeIndex>> SearchServer::Search (const vector<string> &queries_input)
  {
     vector<vector<RelativeIndex>> res_search; // вектор возвращаемый методом search
-
     vector<Entry> vec_entry; // вектор частот
-
     vector<vector<string>> vec_for_work; // вектор векторов для хранения слов по каждому запросу
-
     vec_for_work.reserve(queries_input.size());// резервируем память для вектора размером с количество запросов
 
     //Разбиваем каждый запрос на отдельные слова и записываем в vec_for_work
@@ -68,20 +61,17 @@
             if (!vec_entry.empty()) // Если вектор не пуст добавляем в новый частотный вектор все частоты
             {
               for(auto &el:vec_entry)
-                {
+              {
                   vec_for_map.emplace_back(el);
 
-                  if (vec_id_doc.empty()){ vec_id_doc.emplace_back(el.doc_id);} // создаем вектор состоящий из id документов без повторений id
+                  if (vec_id_doc.empty()){ vec_id_doc.emplace_back(el.doc_id); } // создаем вектор состоящий из id документов без повторений id
 
                   auto it= find(vec_id_doc.begin(), vec_id_doc.end(),el.doc_id);
 
-                  if (it==vec_id_doc.end())
-                    {
-                       vec_id_doc.emplace_back(el.doc_id);
-                    }
-                }
+                  if (it==vec_id_doc.end()) { vec_id_doc.emplace_back(el.doc_id); }
+              }
             }
-            else { continue;}
+            else { continue; }
         }
 
         if (!vec_for_map.empty())
@@ -91,17 +81,16 @@
             vector<size_t> sum_vec(max_id_doc); // собираем вектор сумм
 
             for(auto &f:vec_for_map) // вектор vec_for_map содержит все частоты каждого слова из запроса
-             {
+            {
                 for(auto i=0; i<max_id_doc; i++)
                 {
-                    if (f.doc_id!=i) {continue;}
-                    else {sum_vec[i]+=f.count; } // находим сумму частот из слов запроса по каждому документу
-                }
-             }
-          
-            // ищем максимальный элемент в векторе sum_vec
+                    if (f.doc_id!=i) { continue; }
 
-            vector<size_t> vec_until_sort = sum_vec;
+                    else { sum_vec[i]+=f.count; } // находим сумму частот из слов запроса по каждому документу
+                }
+            }
+            // Поиск максимального элемента в векторе sum_vec
+            vector<size_t> vec_until_sort=sum_vec;
 
             sort(sum_vec.begin(),sum_vec.end());
             // max element
@@ -112,15 +101,16 @@
             vector<RelativeIndex> temporary_vec_relative;
 
             for(size_t pos=0; pos<vec_until_sort.size(); pos++)
-             {
-               if (vec_until_sort[pos]==0) { continue;}
-               else
+            {
+                if (vec_until_sort[pos]==0) { continue; }
+                else
                 {
                     temporary_vec_relative.emplace_back(pos,(float)vec_until_sort[pos]/(float)max_in_sum_vec);
                 }
              }
 
-            sort(temporary_vec_relative.begin(),temporary_vec_relative.end(),[](const RelativeIndex &a,const RelativeIndex &b)->bool{
+            sort(temporary_vec_relative.begin(),temporary_vec_relative.end(),[](const RelativeIndex &a,const RelativeIndex &b)->bool
+            {
                 return a.rank>b.rank;
             });
 
@@ -141,9 +131,11 @@
  vector<vector<pair<int,float>>> SearchServer::MakeVecForAnswer(const vector<vector<RelativeIndex>> &res_search)
  {
     vector<vector<pair<int,float>>> vec_for_answer;
+
     for(auto & el_vector : res_search)
      {
         vector<pair<int,float>> vec;
+
         for(auto & el_pair : el_vector)
         {
             pair<int,float> _pair;
@@ -151,8 +143,10 @@
             _pair.second=el_pair.rank;
             vec.emplace_back(_pair);
         }
+
         vec_for_answer.emplace_back(vec);
      }
+
     return vec_for_answer;
  }
 
@@ -163,11 +157,11 @@
     sort(input_vec.begin(),input_vec.end());
 
     for(size_t i=0; i<input_vec.size(); i++)
-     {
-        if (input_vec[i]==input_vec[i+1] && i+1<input_vec.size()) { continue;}
+    {
+        if (input_vec[i]==input_vec[i+1] && i+1<input_vec.size()) { continue; }
 
-        else {vec_transformed.emplace_back(input_vec[i]);}
-     }
+        else { vec_transformed.emplace_back(input_vec[i]);}
+    }
 
     return vec_transformed;
  }
