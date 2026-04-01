@@ -1,5 +1,6 @@
 #include "..\include\InvertedIndex.h"
-
+#include <thread>
+#include <algorithm>
 
  vector<string>InvertedIndex::MakeVector(const string &in_str)
   {
