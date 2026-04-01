@@ -12,11 +12,11 @@ add_subdirectory(nlohmann_json)
 
 add_executable(search_engine
         src/engine.cpp
-        src/converter_json.cpp
-        src/entry.cpp
-        src/inverted_index.cpp
-        src/relative_index.cpp
-        src/search_server.cpp
+        src/ConverterJSON.cpp
+        src/Entry.cpp
+        src/InvertedIndex.cpp
+        src/RelativeIndex.cpp
+        src/SearchServer.cpp
         include/ConverterJSON.h
         include/InvertedIndex.h
         include/SearchServer.h

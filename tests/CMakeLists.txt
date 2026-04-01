@@ -17,11 +17,11 @@ file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/../config.json
 add_executable(run_tests
         test_inverted_index.cpp
         test_search_server.cpp
-        ../src/converter_json.cpp
-        ../src/entry.cpp
-        ../src/inverted_index.cpp
-        ../src/relative_index.cpp
-        ../src/search_server.cpp
+        ../src/ConverterJSON.cpp
+        ../src/Entry.cpp
+        ../src/InvertedIndex.cpp
+        ../src/RelativeIndex.cpp
+        ../src/SearchServer.cpp
         )
 
 target_include_directories(run_tests PRIVATE

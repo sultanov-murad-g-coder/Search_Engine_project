@@ -1,10 +1,9 @@
 #pragma once
 #include <iostream>
 #include <vector>
-#include <thread>
 #include "..\include\Entry.h"
 #include <map>
-#include <algorithm>
+
 using namespace std;
 
 class InvertedIndex
