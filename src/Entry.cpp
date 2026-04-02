@@ -1,5 +1,4 @@
-#include "..\include\Entry.h"
-
+#include "Entry.h"
 
   Entry::Entry(size_t doc_id, size_t count)
   {

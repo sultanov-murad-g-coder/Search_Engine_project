@@ -1,5 +1,4 @@
-#include "..\include\RelativeIndex.h"
-
+#include "RelativeIndex.h"
 
   RelativeIndex::RelativeIndex(size_t doc_id, float rank)
   {

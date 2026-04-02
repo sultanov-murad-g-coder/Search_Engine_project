@@ -1,4 +1,4 @@
-#include "..\include\ConverterJSON.h"
+#include "ConverterJSON.h"
 
  vector<string> ConverterJSON::GetTextDocuments()
  {
@@ -6,7 +6,10 @@
     try
     {
         ifstream json_file_config,doc_config;
-        json_file_config.open("..//config.json");
+        string path_config=CONFIG_PATH;
+        path_config+="/config.json";
+
+        json_file_config.open(path_config);
 
         if (json_file_config.is_open())
         {
@@ -23,7 +26,11 @@
                     {
                         try
                         {
-                            doc_config.open(path_file);
+                            string path_source_file=RESOURCES_PATH;
+                            path_source_file+="/";
+                            path_source_file+=path_file.get<std::string>();
+
+                            doc_config.open(path_source_file);
                             if (doc_config.is_open())
                             {
                                 string str_line,doc_txt;
@@ -71,11 +78,13 @@
  int ConverterJSON::GetResponsesLimit()
  {
     json dict;
-
     try
     {
         ifstream file_config;
-        file_config.open("..//config.json");
+        string path_config=CONFIG_PATH;
+        path_config+="/config.json";
+
+        file_config.open(path_config);
 
         if (file_config.is_open())
         {
@@ -97,7 +106,9 @@
  {
     try
     {
-        ifstream file_request("..//request.json");
+        string path_config=CONFIG_PATH;
+        path_config+="/request.json";
+        ifstream file_request(path_config);
 
         if (file_request.is_open())
         {
@@ -127,7 +138,11 @@
     ofstream file_for_write;
     try
     {
-        file_for_write.open("..//answers.json");
+        string path_result;
+        path_result=CONFIG_PATH;
+        path_result+="/answers.json";
+
+        file_for_write.open(path_result);
         if (file_for_write.is_open())
         {
             file_for_write.clear();
@@ -197,7 +212,10 @@
 
     try
     {
-        file_config.open("..//config.json");
+        string path_config=CONFIG_PATH;
+        path_config+="/config.json";
+
+        file_config.open(path_config);
 
         if(file_config.is_open())
         {

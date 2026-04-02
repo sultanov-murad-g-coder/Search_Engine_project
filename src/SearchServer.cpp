@@ -1,4 +1,4 @@
-#include "..\include\SearchServer.h"
+#include "SearchServer.h"
 
  SearchServer::SearchServer(InvertedIndex &idx) : _index(idx){};
 
