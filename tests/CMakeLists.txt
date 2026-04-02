@@ -1,3 +1,6 @@
+cmake_minimum_required(VERSION 3.25)
+project(run_tests)
+
 include(FetchContent)
 
 FetchContent_Declare(googletest
@@ -17,15 +20,20 @@ file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/../config.json
 add_executable(run_tests
         test_inverted_index.cpp
         test_search_server.cpp
-        ../src/ConverterJSON.cpp
-        ../src/Entry.cpp
-        ../src/InvertedIndex.cpp
-        ../src/RelativeIndex.cpp
-        ../src/SearchServer.cpp
+        ${CMAKE_SOURCE_DIR}/src/InvertedIndex.cpp
+        ${CMAKE_SOURCE_DIR}/src/SearchServer.cpp
+        ${CMAKE_SOURCE_DIR}/src/Entry.cpp
+        ${CMAKE_SOURCE_DIR}/src/RelativeIndex.cpp
+        ${CMAKE_SOURCE_DIR}/src/ConverterJSON.cpp
         )
 
 target_include_directories(run_tests PRIVATE
         ${CMAKE_CURRENT_SOURCE_DIR}/../include
+        )
+
+target_compile_definitions(run_tests PRIVATE
+        CONFIG_PATH="${CONFIG_DIR}"
+        RESOURCES_PATH="${RESOURCES_DIR}"
         )
 
 target_link_libraries(run_tests PRIVATE
